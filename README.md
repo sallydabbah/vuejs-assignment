@@ -11,7 +11,7 @@ make sure you have these libraries in your package.json file :
 3. npm install 
 4. npm run dev
 
-* Make sure first that u have node.js*
+ Make sure first that u have node.js
 Set-Up Vue-Cli (write in CMD):
 
 * npm install -g vue-cli
