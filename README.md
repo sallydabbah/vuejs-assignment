@@ -14,12 +14,12 @@ make sure you have these libraries in your package.json file :
 * Make sure first that u have node.js*
 Set-Up Vue-Cli (write in CMD):
 
->> npm install -g vue-cli
->>navigate to a folder directory in your cd 
->>vue init webpack-simple <yourprojectname>
->> cd <your project name>
->>npm install
->> npm run dev
+* npm install -g vue-cli
+*navigate to a folder directory in your cd 
+*vue init webpack-simple <yourprojectname>
+* cd <your project name>
+*npm install
+* npm run dev
 
 ************************************
 notes:
