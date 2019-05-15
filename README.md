@@ -25,3 +25,4 @@ Set-Up Vue-Cli (write in CMD):
 notes:
 *I highly recommend using Atom and download the package : language-vue , it will color the code and make it more readable.
 you can install it here : https://atom.io/
+* you can also download Vetur extension in vscode , it will do the same thing as Atom.
