@@ -11,5 +11,17 @@ make sure you have these libraries in your package.json file :
 3. npm install 
 4. npm run dev
 
+* Make sure first that u have node.js*
+Set-Up Vue-Cli (write in CMD):
+
+>> npm install -g vue-cli
+>>navigate to a folder directory in your cd 
+>>vue init webpack-simple <yourprojectname>
+>> cd <your project name>
+>>npm install
+>> npm run dev
+
+************************************
 notes:
-I highly recommend using Atom and download the package : language-vue , it will color the code and make it more readable.
+*I highly recommend using Atom and download the package : language-vue , it will color the code and make it more readable.
+you can install it here : https://atom.io/
