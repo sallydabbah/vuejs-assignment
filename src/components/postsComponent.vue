@@ -23,22 +23,20 @@
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import {mapState} from 'vuex';
 export default {
-    data () {
-        return {
-            posts: []
-        }
-    },
     created() {
-        this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
-            this.posts = data.body.slice(0,100);
-        });
+            this.$store.dispatch('loadPosts',"http://jsonplaceholder.typicode.com/posts");
+    },
+    computed:{
+      posts(){
+        return this.$store.state.posts;
+      }
     },
      methods: {
        seeComments:function(event){
           //console.dir( event.target.name);
          this.$router.push({name:'comments',params:{postId:event.target.name}});
-
        }
      }
 }
