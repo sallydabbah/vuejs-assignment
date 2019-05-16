@@ -24,13 +24,15 @@ export default {
     data () {
         return {
             postId:this.$route.params.postId,
-            comments: []
         }
     },
     created() {
-        this.$http.get('https://jsonplaceholder.typicode.com/comments?postId='+this.postId).then(function(data){
-            this.comments = data.body.slice(0,100);
-        });
+       this.$store.dispatch('loadPostComments','https://jsonplaceholder.typicode.com/comments?postId='+this.postId);
+    },
+    computed:{
+      comments(){
+        return this.$store.state.selectedPostComments;
+      }
     }
 }
 </script>
