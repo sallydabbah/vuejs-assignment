@@ -8,7 +8,8 @@ Vue.use(axios);
 export const store = new Vuex.Store({
     state: {
         posts: [],
-        comments: []
+        comments: [],
+        selectedPostComments:[]
     },
     actions: {
         loadPosts(context, api) {
@@ -32,6 +33,16 @@ export const store = new Vuex.Store({
                 .catch(error => {
                     console.log('error in loadposts' + error);
                 });
+        },
+        loadPostComments(context, api) {
+            axios
+                .get(api)
+                .then(data => {   
+                    context.commit('setPostComments', data.data);
+                })
+                .catch(error => {
+                    console.log('error in loadposts' + error);
+                });
         }
     },
     mutations: {
@@ -40,6 +51,9 @@ export const store = new Vuex.Store({
         },
         setComments(state,comments){
             state.comments=comments;
+        },
+        setPostComments(state,comments){
+            state.selectedPostComments=comments;
         }
     }
 });
