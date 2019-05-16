@@ -23,17 +23,14 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 export default{
-  data(){
-    return {
-       id:this.$route.params.id,
-       comments:[]
-    }
-  },
   created() {
-      this.$http.get('https://jsonplaceholder.typicode.com/posts/' + this.id +'/comments').then(function(data){
-          this.comments = data.body.slice(0,100);
-      });
-  }
+       this.$store.dispatch('loadComments','https://jsonplaceholder.typicode.com/posts/' + this.id +'/comments');
+  },
+  computed :{
+      comments(){
+        return this.$store.state.comments;
+      }
+    }
 }
 </script>
 <style>
